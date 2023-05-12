@@ -1,0 +1,252 @@
+ {% extends 'prediction/base.html' %}
+ {%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey From</title>
+   
+    <link rel="stylesheet" href="{% static 'prediction/css/newbase.css' %}">
+  
+
+<body>
+    <main id="main">
+        <h1 id="title">Pneumonia Prediction Form</h1>
+        <div id="form-outer">
+            <p id="description">Let us know how we can improve our services</p>
+            <form id="survey-form" method="POST" >
+                <div class="rowTab">
+                    <div class="labels">
+                        <label id="name-label">*Gender: </label>
+                    </div>
+                    <div class="rightTab">
+                        <input type="radio" name="gender" value="male" id="male"><label for="male">Male</label>
+                        <input type="radio" name="gender" value="female" id="female"><label for="female">Female</label>
+                    </div>
+                </div>
+                <div class="rowTab">
+                    <div class="labels">
+                        <label id="name-label">*Age: </label>
+                    </div>
+                    <div class="rightTab">
+                        <input type="text" name="age" class="input-field" placeholder="Enter your age" required>
+                    </div>
+                </div>
+                <div class="rowTab">
+                    <div class="labels">
+                        <label id="number-label">Do you have fever?: </label>
+                    </div>
+                    <div class="rightTab">
+                        <input type="radio" name="fever" value="0"id="fever-no"><label for="fever-no">No</label>
+                        <input type="radio" name="fever" value="1" id="fever-yes"><label for="fever-yes">Yes</label>
+                    </div>
+                </div>
+                <div class="rowTab">
+                    <div class="labels">
+                        <label id="number-label">Do you have cough?: </label>
+                    </div>
+                    <div class="rightTab">
+                        <input type="radio" name="cough" value="0" id="cough-no"><label for="cough-no">No</label>
+                        <input type="radio" name="cough" value="1" id="cough-yes"><label for="cough-yes">Yes</label>
+                    </div>
+                </div>
+                <div class="rowTab">
+                    <div class="labels">
+                        <label id="number-label">Do you have difficulty breathing?: </label>
+                    </div>
+                    <div class="rightTab">
+                        <input type="radio" name="breathing_difficulty" value="0" id="breathing-no"><label for="breathing-no">No</label>
+                        <input type="radio" name="breathing_difficulty" value="1" id="breathing-yes"><label for="breathing-yes">Yes</label>
+                    </div>
+                </div>
+                <div class="rowTab">
+                    <div class="labels">
+                        <label id="number-label">Have you experienced weight loss?: </label>
+                    </div>
+                    <div class="rightTab">
+                        <input type="radio" name="weight_loss" value="0" id="weight-no"><label for="weight-no">No</label>
+                        <input type="radio" name="weight_loss" value="1" id="weight-yes"><label for="weight-yes">Yes</label>
+                                
+                    </div>
+                </div>
+                <div class="rowTab">
+                    <div class="labels">
+                        <label id="number-label">Do you have headache?: </label>
+                    </div>
+                    <div class="rightTab">
+                        <input type="radio" name="headache" value="0" id="headache-no"><label for="headache-no">No</label>
+                        <input type="radio" name="headache" value="1" id="headache-yes"><label for="headache-yes">Yes</label>
+                                
+                    </div>
+                </div>
+                <div class="rowTab">
+                    <div class="labels">
+                        <label id="number-label">Have you experienced fainting?: </label>
+                    </div>
+                    <div class="rightTab">
+                        <input type="radio" name="fainting" value="0" id="fainting-no"><label for="fainting-no">No</label>
+                        <input type="radio" name="fainting" value="1" id="fainting-yes"><label for="fainting-yes">Yes</label>
+                                
+                    </div>
+                </div>
+                <div class="rowTab">
+                    <div class="labels">
+                        <label id="number-label">Have you had bronchitis infection?: </label>
+                    </div>
+                    <div class="rightTab">
+                        <input type="radio" name="bronchitis_infection" value="0" id="bronchitis-no"><label for="bronchitis-no">No</label>
+                        <input type="radio" name="bronchitis_infection" value="1" id="bronchitis-yes"><label for="bronchitis-yes">Yes</label>
+                                  
+                                
+                    </div>
+                </div>
+                <div class="rowTab">
+                    <div class="labels">
+                        <label id="number-label">Do you have chest pain?: </label>
+                    </div>
+                    <div class="rightTab">
+                        <input type="radio" name="bronchitis_infection" value="0" id="bronchitis-no"><label for="bronchitis-no">No</label>
+                        <input type="radio" name="bronchitis_infection" value="1" id="bronchitis-yes"><label for="bronchitis-yes">Yes</label>
+                                  
+                                
+                    </div>
+                </div>
+                <div class="rowTab">
+                    <div class="labels">
+                        <label for="userRating"> How likely is that you would recommend freeCodeCamp to a friend?</label>
+                    </div>
+                    <div class="rightTab">
+                        <ul style="list-style: none;">
+                            <li class="radio">
+                                <label>
+                                    Definitely
+                                    <input name="radio-butons" type="radio" value="1" class="userRatings">
+                                </label>
+                            </li>
+                            <li class="radio">
+                                <label>
+                                    Maybe
+                                    <input name="radio-butons" type="radio" value="2" class="userRatings">
+                                </label>
+                            </li>
+                            <li class="radio">
+                                <label>
+                                        Not sure
+                                    <input name="radio-butons" type="radio" value="3" class="userRatings">
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="rowTab">
+                    <div class="labels">
+                        <label for="currentPos">What do you like most in FCC:</label>
+                    </div>
+                    <div class="rightTab">
+                        <select id="most-like" name="mostLike" class="dropdown">
+                            <option disabled selected value="">Select an opion</option>
+                            <option  value="challenges">Challenges</option>
+                            <option  value="projects">Projects</option>
+                            <option  value="community">Community</option>
+                            <option  value="openSource">OpenSource</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="rowTab">
+                        <div class="labels">
+                            <label for="preferences">Things that should be improved in the future (Check all that apply):
+                            </label>
+                        </div>
+                        <div class="rightTab">
+                            <ul id="preferences" style="list-style:none">
+                                <li class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="prefer" value="1" class="userRatings">
+                                        Front-end Projects
+                                    </label>
+                                </li>
+                                <li class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="prefer" value="1" class="userRatings">
+                                        Back-end Projects
+                                    </label>
+                                </li>
+                                <li class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="prefer" value="1" class="userRatings">
+                                        Data Visualization
+                                    </label>
+                                </li>
+                                <li class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="prefer" value="1" class="userRatings">
+                                        Challenges
+                                    </label>
+                                </li>
+                                <li class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="prefer" value="1" class="userRatings">
+                                        Open Source Community
+                                    </label>
+                                </li>
+                                <li class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="prefer" value="1" class="userRatings">
+                                        Gitter help rooms
+                                    </label>
+                                </li>
+                                <li class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="prefer" value="1" class="userRatings">
+                                        Videos
+                                    </label>
+                                </li>
+                                <li class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="prefer" value="1" class="userRatings">
+                                        City Meetups
+                                    </label>
+                                </li>
+                                <li class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="prefer" value="1" class="userRatings">
+                                        Wiki
+                                    </label>
+                                </li>
+                                <li class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="prefer" value="1" class="userRatings">
+                                        Forum
+                                    </label>
+                                </li>
+                                <li class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="prefer" value="1" class="userRatings">
+                                        Additional Courses
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                </div>
+                <div class="rowTab">
+                        <div class="labels">
+                            <label for="preferences">Any Comments or Suggestions?
+                            </label>
+                        </div>
+                        <div class="rightTab">
+                            <textarea style="height: 50px; resize: vertical;" name="comment" id="comments" cols="30" rows="10" class="input-field" placeholder="Enter your comment here..."></textarea>
+                        </div>
+                </div>
+                <button id="submit" type="submit" >Submit</button>
+            </form>
+        </div>
+    </main>
+
+
+
+<!--bootstrap-->
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

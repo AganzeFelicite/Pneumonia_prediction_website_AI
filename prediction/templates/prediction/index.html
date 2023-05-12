@@ -1,0 +1,123 @@
+{% extends 'prediction/base.html' %}
+
+{% block content %}
+<main id="main">
+    <h1 id="title">Pneumonia Prediction Form</h1>
+    <div id="form-outer">
+        <p id="description">Let us know how we can improve our services</p>
+        <form id="survey-form" action="{% url 'my_view' %}"method="POST" >
+            {% csrf_token %} 
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="name-label">*Gender: </label>
+                </div>
+                <div class="rightTab">
+                    <input type="radio" name="gender" value="male" id="male"><label for="male">Male</label>
+                    <input type="radio" name="gender" value="female" id="female"><label for="female">Female</label>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="name-label">*Age: </label>
+                </div>
+                <div class="rightTab">
+                    <input type="text" name="age" class="input-field" placeholder="Enter your age" required>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label">Do you have fever?: </label>
+                </div>
+                <div class="rightTab">
+                    <input type="radio" name="fever" value="0"id="fever-no"><label for="fever-no">No</label>
+                    <input type="radio" name="fever" value="1" id="fever-yes"><label for="fever-yes">Yes</label>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label">Do you have cough?: </label>
+                </div>
+                <div class="rightTab">
+                    <input type="radio" name="cough" value="0" id="cough-no"><label for="cough-no">No</label>
+                    <input type="radio" name="cough" value="1" id="cough-yes"><label for="cough-yes">Yes</label>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label">Do you have difficulty breathing?: </label>
+                </div>
+                <div class="rightTab">
+                    <input type="radio" name="breathing_difficulty" value="0" id="breathing-no"><label for="breathing-no">No</label>
+                    <input type="radio" name="breathing_difficulty" value="1" id="breathing-yes"><label for="breathing-yes">Yes</label>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label">Have you experienced weight loss?: </label>
+                </div>
+                <div class="rightTab">
+                    <input type="radio" name="weight_loss" value="0" id="weight-no"><label for="weight-no">No</label>
+                    <input type="radio" name="weight_loss" value="1" id="weight-yes"><label for="weight-yes">Yes</label>
+                            
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label">Do you have headache?: </label>
+                </div>
+                <div class="rightTab">
+                    <input type="radio" name="headache" value="0" id="headache-no"><label for="headache-no">No</label>
+                    <input type="radio" name="headache" value="1" id="headache-yes"><label for="headache-yes">Yes</label>
+                            
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label">Have you experienced fainting?: </label>
+                </div>
+                <div class="rightTab">
+                    <input type="radio" name="fainting" value="0" id="fainting-no"><label for="fainting-no">No</label>
+                    <input type="radio" name="fainting" value="1" id="fainting-yes"><label for="fainting-yes">Yes</label>
+                            
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label">Have you had bronchitis infection?: </label>
+                </div>
+                <div class="rightTab">
+                    <input type="radio" name="bronchitis_infection" value="0" id="bronchitis-no"><label for="bronchitis-no">No</label>
+                    <input type="radio" name="bronchitis_infection" value="1" id="bronchitis-yes"><label for="bronchitis-yes">Yes</label>
+                              
+                            
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label">Do you have chest pain?: </label>
+                </div>
+                <div class="rightTab">
+                    <input type="radio" name="chest_pain" value="0" id="chest-no"><label for="chest-no">No</label>
+                    <input type="radio" name="chest_pain" value="1" id="chest-yes"><label for="chest-no">Yes</label>         
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label">Do you have any tuberculosis_historyin history?: </label>
+                </div>
+                <div class="rightTab">
+                    <input type="radio" name="tuberculosis_history" value="0" id="tuberculosis_history"><label for="tuberculosis_history">No</label>
+                    <input type="radio" name="tuberculosis_history" value="1" id="tuberculosis_history"><label for="tuberculosis_history">Yes</label>      
+                </div>
+            </div>
+           
+            <button id="submit" type="submit" >Submit</button>
+        </form>
+    </div>
+</main>
+
+
+
+<!--bootstrap-->
+{% endblock %}
+   

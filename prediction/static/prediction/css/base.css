@@ -1,0 +1,219 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 11, 2023, 11:32:39 AM
+    Author     : michael
+*/
+
+body{
+    margin: 0;
+    padding: 0;  
+     font-family:'Jost', sans-serif;
+     background-image: url('/static/prediction/images/KING.jpg') no-repeat center / cover;
+}
+.container{
+     
+     width: 100%;
+     height: 100vh;
+     margin: 0;
+}
+.myform{
+    width: 10%;
+    height: 0;
+    margin: 0;
+    border-top: 500px solid #0693e3;
+    border-right: 500px solid transparent; 
+}
+.theupper{
+  height: 150px;
+  width: 80%;
+  margin: 20px;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  background-color: #ffffff;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    
+}
+.logo{
+    width: 100px;
+    margin: 2px;
+    height: 90%;
+     background: url('/static/prediction/images/KFH-logo-vector-format.png') no-repeat center / contain;
+}
+.titre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px; 
+    color: #0693e3;
+}
+.searchcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+}
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 90%;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #0693e3;
+ 
+}
+
+.search input[type="text"] {
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.search button[type="submit"] {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  color: #777777;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.search button[type="submit"]:hover {
+  color: #333333;
+}
+
+.fa-search {
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.contenu{
+    
+  height: 60vh;
+  margin-top: 150px;
+  width: 110%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: absolute;
+  background-color: #ffffff;
+  top: 180%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    
+}
+.one{
+    height: 100%;
+    width: 50%;
+    display: felx;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 20px;
+    background: url('/static/prediction/images/pneumonia.jpg') no-repeat center / contain;
+   
+}
+p{ 
+/*   color: #000;  set text color */
+  -webkit-text-stroke: 1px #0693e3;  /* set text stroke */
+}
+h3{
+  color: #fff; /* set text color */
+  -webkit-text-stroke: 1px #000; /* set text stroke */
+}
+  .deux{
+   height: 100%;
+   width: 50%;
+   display: felx;
+   flex-direction: column;
+   
+}
+
+.inner{
+   
+    width: 100%;
+    height: 40vh;
+    display: flex; 
+    margin-bottom: 60px; 
+}
+.first{
+    height: 100%;
+    width: 100%;
+    padding: 20px;   
+}
+.last{
+    height: 100%;
+    width: 80%;
+    padding: 20px;
+    
+}
+label {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #777777;
+}
+h1 {
+ text-align: center;
+  margin-bottom: 30px;
+  
+}
+input[type="radio"] {
+  margin-right: 10px;
+}
+.age{
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.forbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     margin-bottom: 30px;
+}
+.btn{
+    display: block;
+    width: 180px;
+    height: 50px;
+    color: #023;
+    font-size: 14px;
+    padding: 12px 0;
+    padding-bottom: 12px;
+    background: #fff;
+    border: 0;
+    border-radius: 20px;
+    border: 2px solid #000;
+    
+    top: 50px;
+    align-items: center;
+    font-weight: bold;
+}
+.btn:hover{
+     border: 2px solid #000;
+     background: #009999;
+     color: #fff;
+}

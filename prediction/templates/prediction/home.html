@@ -1,0 +1,47 @@
+{% extends "prediction/base.html"%}
+
+
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+{% block content %}
+<div class="container  d-flex align-items-center justify-content-center">
+    {% if result == "Negative"%}
+    <div class="row mx-auto">
+        <div class="col-sm-6 col-md-6 mx-auto my-auto">
+            <div class="alert alert-success">
+               
+               <span class="glyphicon glyphicon-ok"></span> <strong>Success Message</strong>
+                <hr class="message-inner-separator">
+                <p> {{ text }}</p>
+            </div>
+        </div>
+     
+
+    </div>
+    {% endif %}
+    {% if result == "Positive"%}
+        <div class="col-sm-6 col-md-6 mx-auto my-auto">
+            <div class="alert alert-danger">
+               
+                <span class="glyphicon glyphicon-hand-right"></span> <strong>Danger Message</strong>
+                <hr class="message-inner-separator">
+                <p>
+                   {{text}}</p>
+            </div>
+
+        </div>
+    {% endif %}
+    </div>
+    <button type="button" onclick="location.href='{% url 'index' %}'" class="btn btn-warning" >Go back</button>
+    
+
+</div>
+{% endblock %}
+
+
+
+
