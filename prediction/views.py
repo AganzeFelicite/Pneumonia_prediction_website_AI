@@ -10,7 +10,7 @@ def predict(ls):
 
 # Create your views here.
 def index(request):
-    return render(request, 'prediction/index.html')
+    return render(request, 'prediction/index.html', {'title': "Pneumonia Detection" })
 
 
 def my_view(request):
@@ -50,7 +50,7 @@ def my_view(request):
             user.save()
             message = "Negative"
             text ="You don't have Pneumonia but please consult a doctor if you have any symptoms and take a chest x-ray"
-            return render(request, 'prediction/home.html', {'result': message, 'text': text })
+            return render(request, 'prediction/home.html', {'result': message, 'text': text, 'title': "Pneumonia Detection" })
         # do something with the values
         
     else:
@@ -58,3 +58,6 @@ def my_view(request):
         pass
         error = "Error"
         return render(request, 'prediction/home.html',  {'result': error })
+    
+def about(request):
+    return render(request, 'prediction/about.html', {'title': "About" })
