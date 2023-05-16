@@ -32,6 +32,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'pneumoniapredictions.onrender.com',
+    "127.0.0.1"
 ]
 
 
