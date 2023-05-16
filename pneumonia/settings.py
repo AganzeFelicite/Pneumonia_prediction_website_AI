@@ -28,7 +28,7 @@ environ.Env.read_env()
 SECRET_KEY = 'django-insecure-=92uml%@59zz&+#)&w4yp4jzq5mol!r7ckkt5ekb)ist5ll4b^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'pneumoniapredictions.onrender.com',
